@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071426">
+<title>لا تضغط قبل أن تتأكد | توعية رقمية</title>
+<style>
+:root{--bg:#071426;--cyan:#55e5ef;--blue:#267cff;--white:#f4f8ff;--muted:#b8c7da;--red:#ff5d70}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 75% 15%,#12345b 0,#071426 48%,#030914 100%);color:var(--white);font-family:Tahoma,Arial,sans-serif;min-height:100vh;display:grid;place-items:center;padding:18px}
+.wrap{width:min(980px,100%)}.top{display:flex;justify-content:space-between;align-items:center;margin:0 0 14px;color:var(--muted);font-size:13px}.brand{letter-spacing:.3px;color:var(--cyan);font-weight:bold}
+.player{position:relative;overflow:hidden;border:1px solid #294566;border-radius:24px;background:linear-gradient(135deg,#0d2038,#07111f 70%);box-shadow:0 25px 80px #0009;min-height:540px}
+.scene{display:none;min-height:540px;padding:clamp(25px,6vw,64px);position:relative;isolation:isolate}.scene.active{display:flex;flex-direction:column;justify-content:center;animation:appear .7s ease}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.scene:before,.scene:after{content:"";position:absolute;z-index:-1;border-radius:50%;filter:blur(2px);opacity:.24}
+.scene:before{width:320px;height:320px;background:var(--blue);left:-100px;top:-110px}.scene:after{width:240px;height:240px;background:var(--cyan);right:-80px;bottom:-110px}
+.kicker{color:var(--cyan);font-size:14px;font-weight:bold;margin-bottom:18px}.headline{font-size:clamp(34px,6vw,64px);line-height:1.2;margin:0 0 18px;max-width:760px}.headline em{font-style:normal;color:var(--cyan)}.desc{font-size:clamp(17px,2.3vw,22px);line-height:1.9;color:var(--muted);max-width:700px;margin:0}
+.visual{font-size:clamp(64px,11vw,112px);margin:28px 0 14px;filter:drop-shadow(0 10px 22px #0008)}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.pill{border:1px solid #355879;background:#102945;border-radius:999px;padding:9px 14px;color:#dcecff;font-size:14px}
+.warning{color:#ffd4d9;border-color:#87404c;background:#3a1823}
+.controls{padding:18px 22px 20px;background:#050e1b;border-top:1px solid #203a55}.progress-head{display:flex;justify-content:space-between;color:#9fb2c9;font-size:12px;margin-bottom:10px}.track{height:5px;background:#20334a;border-radius:9px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:width .2s linear}
+.control-row{display:flex;align-items:center;gap:12px;margin-top:17px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:12px 18px;background:linear-gradient(120deg,#267cff,#26b8d5);color:white;font-weight:bold;font-size:15px;cursor:pointer}.btn.secondary{background:#172a40;border:1px solid #38516b}.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}.hint{color:#8ea4bd;font-size:12px;margin-right:auto;line-height:1.7}
+.caption{min-height:38px;color:#dcecff;line-height:1.7;font-size:14px;margin-top:13px}
+.footer{text-align:center;color:#71869e;font-size:12px;margin-top:13px;line-height:1.8}
+@media(max-width:600px){.player,.scene{min-height:590px}.control-row{gap:8px}.btn{padding:11px 13px}.hint{width:100%;margin:0}}
+</style>
+</head>
+<body>
+<main class="wrap">
+ <div class="top"><span class="brand">وعي رقمي · حملة توعوية</span><span>مدة العرض: دقيقة واحدة تقريباً</span></div>
+ <section class="player" aria-label="فيديو توعوي عن الأمان الرقمي">
+  <article class="scene active" data-duration="15000">
+   <div class="kicker">01 / انتبه قبل أن تضغط</div>
+   <h1 class="headline">مو كل رابط توصلك…<br><em>يستحق تفتحه!</em></h1>
+   <p class="desc">ثوانٍ من التسرّع قد تعرّض خصوصيتك وبياناتك للخطر. خلّينا نتعلّم شلون نحمي نفسنا.</p>
+   <div class="visual">🔗</div>
+   <div class="pills"><span class="pill">تحقّق من المصدر</span><span class="pill warning">لا تستعجل</span></div>
+  </article>
+  <article class="scene" data-duration="15000">
+   <div class="kicker">02 / الروابط الوهمية</div>
+   <h2 class="headline">جائزة مجانية؟<br><em>يمكن تكون فخ!</em></h2>
+   <p class="desc">قد تنتحل الروابط المزيفة أسماء شركات ومتاجر ومسابقات، وتطلب بياناتك أو تطلب منك نشر الرابط بين أصدقائك. لا تدخل معلوماتك ولا تشارك الرابط قبل التأكد من الموقع الرسمي.</p>
+   <div class="visual">🎁 ⚠️</div>
+   <div class="pills"><span class="pill">افحص عنوان الموقع</span><span class="pill warning">احذر طلب نشر الرابط</span></div>
+  </article>
+  <article class="scene" data-duration="16000">
+   <div class="kicker">03 / أذونات التطبيقات</div>
+   <h2 class="headline">ليش لعبة تحتاج<br><em>جهات اتصالك؟</em></h2>
+   <p class="desc">مو كل تطبيق يحتاج يشوف صورك أو يستخدم الكاميرا أو يقرأ جهات اتصالك. إذا الإذن ما إله علاقة بوظيفة التطبيق، ارفضه وراجع صلاحياته من إعدادات الهاتف.</p>
+   <div class="visual">📱 🔒</div>
+   <div class="pills"><span class="pill">الصور</span><span class="pill">الكاميرا</span><span class="pill">جهات الاتصال</span></div>
+  </article>
+  <article class="scene" data-duration="14000">
+   <div class="kicker">04 / احمِ نفسك</div>
+   <h2 class="headline">خصوصيتك مو لعبة…<br><em>قرارك يحميك.</em></h2>
+   <p class="desc">نزّل التطبيقات من المتاجر الرسمية، حدّث جهازك، استخدم كلمات مرور قوية، وفعّل التحقق بخطوتين. وإذا شكّيت برابط، لا تضغط عليه.</p>
+   <div class="visual">🛡️</div>
+   <div class="pills"><span class="pill">فكّر</span><span class="pill">تحقّق</span><span class="pill">ثم اضغط</span></div>
+  </article>
+  <div class="controls">
+   <div class="progress-head"><span id="sceneLabel">المشهد 1 من 4</span><span id="timeLabel">00:00 / 01:00</span></div>
+   <div class="track"><div class="fill" id="fill"></div></div>
+   <div class="control-row">
+    <button class="btn" id="play">▶ ابدأ العرض</button>
+    <button class="btn secondary" id="pause">Ⅱ إيقاف مؤقت</button>
+    <button class="btn secondary" id="restart">↻ إعادة</button>
+    <span class="hint">لأفضل تجربة: ارفع صوت الهاتف. يعتمد التعليق الصوتي على الأصوات العربية المتاحة في جهازك.</span>
+   </div>
+   <div class="caption" id="caption" aria-live="polite">اضغط «ابدأ العرض» للاستماع إلى التعليق الصوتي ومشاهدة المشاهد.</div>
+  </div>
+ </section>
+ <div class="footer">رسالة توعوية: لا تمنح أي تطبيق صلاحية إلا إذا كانت ضرورية ومفهومة بالنسبة لك.</div>
+</main>
+<script>
+const scenes=[...document.querySelectorAll('.scene')],fill=document.getElementById('fill'),timeLabel=document.getElementById('timeLabel'),sceneLabel=document.getElementById('sceneLabel'),caption=document.getElementById('caption');
+const durations=scenes.map(s=>Number(s.dataset.duration)),total=durations.reduce((a,b)=>a+b,0);
+const narration=[
+"مو كل رابط توصلك يستحق تفتحه. ثوانٍ من التسرع قد تعرض خصوصيتك وبياناتك للخطر. خلينا نتعلم شلون نحمي نفسنا.",
+"قد تنتحل الروابط المزيفة أسماء شركات ومتاجر ومسابقات، وتطلب بياناتك أو تطلب منك نشر الرابط بين أصدقائك. لا تدخل معلوماتك ولا تشارك الرابط قبل التأكد من الموقع الرسمي.",
+"مو كل تطبيق يحتاج يشوف صورك أو يستخدم الكاميرا أو يقرأ جهات اتصالك. إذا الإذن ما إله علاقة بوظيفة التطبيق، ارفضه وراجع صلاحياته من إعدادات الهاتف.",
+"نزّل التطبيقات من المتاجر الرسمية، حدّث جهازك، استخدم كلمات مرور قوية، وفعّل التحقق بخطوتين. وإذا شكّيت برابط، لا تضغط عليه. خصوصيتك مو لعبة، قرارك يحميك."
+];
+let elapsed=0,startedAt=0,timer=null,playing=false,utterance=null;
+function showScene(index){scenes.forEach((s,i)=>s.classList.toggle('active',i===index));sceneLabel.textContent=`المشهد ${index+1} من 4`;}
+function sceneAt(ms){let sum=0;for(let i=0;i<durations.length;i++){sum+=durations[i];if(ms<sum)return i;}return 3;}
+function render(){const idx=sceneAt(elapsed);showScene(idx);fill.style.width=(elapsed/total*100)+'%';let sec=Math.floor(elapsed/1000),mins=Math.floor(sec/60);timeLabel.textContent=`${String(mins).padStart(2,'0')}:${String(sec%60).padStart(2,'0')} / 01:00`;}
+function pickArabicVoice(){const voices=speechSynthesis.getVoices().filter(v=>v.lang&&v.lang.toLowerCase().startsWith('ar'));return voices.find(v=>/male|mans|maged|tarik|hamza|hadi/i.test(v.name))||voices.find(v=>/ar-iq/i.test(v.lang))||voices[0]||null;}
+function speakAll(){
+ if(!('speechSynthesis' in window)){caption.textContent='متصفحك لا يدعم التعليق الصوتي. جرّب فتح الصفحة بمتصفح حديث.';return;}
+ speechSynthesis.cancel();
+ let index=sceneAt(elapsed),offset=0;for(let i=0;i<index;i++)offset+=durations[i];
+ const u=new SpeechSynthesisUtterance(narration[index]);u.lang='ar-IQ';u.rate=.91;u.pitch=.82;
+ const voice=pickArabicVoice();if(voice)u.voice=voice;
+ u.onend=()=>{if(!playing)return;let next=index+1;if(next<4){elapsed=durations.slice(0,next).reduce((a,b)=>a+b,0);render();speakAll();}else{elapsed=total;finish();}};
+ u.onerror=()=>{caption.textContent='تعذّر تشغيل الصوت على هذا الجهاز. يمكنك متابعة المشاهد والنصوص الظاهرة.';};
+ utterance=u;caption.textContent=narration[index];speechSynthesis.speak(u);
+}
+function tick(){if(!playing)return;let now=performance.now();elapsed=Math.min(total,elapsed+(now-startedAt));startedAt=now;render();if(elapsed>=total){finish();}}
+function finish(){playing=false;clearInterval(timer);timer=null;speechSynthesis.cancel();elapsed=total;render();document.getElementById('play').textContent='▶ تشغيل من البداية';caption.textContent='فكّر، تحقّق، ثم اضغط. شكراً لمشاهدتك.';}
+function play(){if(playing)return;if(elapsed>=total)elapsed=0;playing=true;startedAt=performance.now();timer=setInterval(tick,200);render();speakAll();document.getElementById('play').textContent='▶ متابعة العرض';}
+function pause(){if(!playing)return;playing=false;clearInterval(timer);timer=null;speechSynthesis.pause();document.getElementById('play').textContent='▶ متابعة العرض';}
+function restart(){playing=false;clearInterval(timer);timer=null;speechSynthesis.cancel();elapsed=0;render();caption.textContent='اضغط «ابدأ العرض» للاستماع إلى التعليق الصوتي ومشاهدة المشاهد.';document.getElementById('play').textContent='▶ ابدأ العرض';}
+document.getElementById('play').addEventListener('click',()=>{if(speechSynthesis.paused&&playing){speechSynthesis.resume();return;}play();});
+document.getElementById('pause').addEventListener('click',pause);
+document.getElementById('restart').addEventListener('click',restart);
+if('speechSynthesis' in window)speechSynthesis.onvoiceschanged=()=>{};
+render();
+</script>
+</body>
+</html>
